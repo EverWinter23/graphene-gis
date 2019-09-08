@@ -1,0 +1,26 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.7.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y --fix-missing --no-install-recommends apt-utils gdal-bin binutils libproj-dev libgdal-dev
+      - run:
+          name: install dependencies
+          command: |
+
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+
+      - run:
+          name: run tests
+          command: |
+            . venv/bin/activate
+            ls -l
+            py.test graphene_gis --cov=graphene_gis -vv
+            make tests
+            ls -l
