@@ -42,3 +42,10 @@ class LineStringScalar(GISScalar):
 
     class Meta:
         description = "A GIS LineString geojson"
+
+
+class PolygonScalar(GISScalar):
+    geom_typeid = 3
+
+    class Meta:
+        description = " A GIS Polygon geojson"

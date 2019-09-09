@@ -5,9 +5,11 @@ from graphene_gis import scalars
 GIS_FIELD_SCALAR = {
     "PointField": scalars.PointScalar,
     "LineStringField": scalars.LineStringScalar,
+    "PolygonField": scalars.PolygonScalar,
 }
 
 
+@convert_django_field.register(gis_models.PolygonField)
 @convert_django_field.register(gis_models.LineStringField)
 @convert_django_field.register(gis_models.PointField)
 def gis_converter(field, registry=None):

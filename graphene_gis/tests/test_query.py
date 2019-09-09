@@ -26,7 +26,14 @@ def test_should_convert_gis_scalar_to_geojson():
         }
     """
 
-    expected = {"pointModel": {"point": {"type": "Point", "coordinates": [34.2, 54.3]}}}
+    expected = {
+        "pointModel": {
+            "point": {
+                "type": "Point", 
+                "coordinates": [34.2, 54.3]
+            }
+        }
+    }
 
     result = schema.execute(query)
     assert not result.errors
