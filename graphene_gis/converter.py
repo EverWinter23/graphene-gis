@@ -6,9 +6,13 @@ GIS_FIELD_SCALAR = {
     "PointField": scalars.PointScalar,
     "LineStringField": scalars.LineStringScalar,
     "PolygonField": scalars.PolygonScalar,
+    "MultiPolygonField": scalars.MultiPolygonScalar,
+    "GeometryField": scalars.GISScalar
 }
 
 
+@convert_django_field.register(gis_models.GeometryField)
+@convert_django_field.register(gis_models.MultiPolygonField)
 @convert_django_field.register(gis_models.PolygonField)
 @convert_django_field.register(gis_models.LineStringField)
 @convert_django_field.register(gis_models.PointField)

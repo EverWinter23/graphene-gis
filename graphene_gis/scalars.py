@@ -49,3 +49,10 @@ class PolygonScalar(GISScalar):
 
     class Meta:
         description = " A GIS Polygon geojson"
+
+
+class MultiPolygonScalar(GISScalar):
+    geom_typeid = 6
+
+    class Meta:
+        description = " A GIS MultiPolygon geojson"
