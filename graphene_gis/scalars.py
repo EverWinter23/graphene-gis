@@ -1,7 +1,6 @@
 from graphql.language import ast
 from graphene.types import Scalar
 from django.contrib.gis.geos import GEOSGeometry
-import pdb
 
 
 class GISScalar(Scalar):
@@ -18,14 +17,12 @@ class GISScalar(Scalar):
 
     @classmethod
     def parse_literal(cls, node):
-        # pdb.set_trace()
         assert isinstance(node, ast.StringValue)
         geometry = GEOSGeometry(node.value)
         return eval(geometry.geojson)
 
     @classmethod
     def parse_value(cls, node):
-        pdb.set_trace()
         geometry = GEOSGeometry(node.value)
         return eval(geometry.geojson)
 
@@ -37,11 +34,11 @@ class JSONScalar(Scalar):
 
     @staticmethod
     def parse_literal(cls, node):
-        return node.value
+        raise NotImplementedError
 
     @staticmethod
     def parse_value(cls, node):
-        return node
+        raise NotImplementedError
 
 
 class PointScalar(GISScalar):

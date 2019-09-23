@@ -13,16 +13,17 @@ dev_requires = [
 
 setup(
     name="graphene-gis",
-    version="0.0.1",
+    version="0.0.2",
     description="GIS support for graphene-django",
     keywords="api graphql graphene geos gis",
     packages=find_packages(exclude=["tests"]),
     author="Rishabh Mehta",
     author_email="eternal.blizzard23@gmail.com",
-    install_requires = [
+    install_requires=[
         "graphene==2.1.8",
         "graphene-django==2.5.0",
-        "graphql-core==2.2.1"
+        "graphql-core==2.2.1",
+        "psycopg2==2.8.3"
     ],
 
     setup_requires=["pytest-runner"],

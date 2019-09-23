@@ -1,3 +1,4 @@
+import json
 import graphene
 from graphene_gis.converter import gis_converter  # noqa
 from graphene_gis.tests.mocks import PointModel, PointModelType
@@ -31,7 +32,7 @@ def test_should_convert_gis_scalar_to_geojson():
 
     result = schema.execute(query)
     assert not result.errors
-    assert result.data == expected
+    assert json.loads(json.dumps(dict(result.data))) == expected
 
 
 def test_should_convert_json_to_dict():
@@ -67,4 +68,4 @@ def test_should_convert_json_to_dict():
 
     result = schema.execute(query)
     assert not result.errors
-    assert result.data == expected
+    assert json.loads(json.dumps(dict(result.data))) == expected
