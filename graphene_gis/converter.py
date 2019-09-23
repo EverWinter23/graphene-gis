@@ -1,4 +1,5 @@
 from django.contrib.gis.db import models as gis_models
+from django.contrib.postgres import fields
 from graphene_django.converter import convert_django_field
 from graphene_gis import scalars
 
@@ -21,3 +22,9 @@ def gis_converter(field, registry=None):
     return GIS_FIELD_SCALAR[class_name](
         required=not field.null, description=field.help_text
     )
+
+
+@convert_django_field.register(fields.JSONField)
+def json_converter(field, registry=None):
+    return scalars.JSONScalar(required=not field.null,
+                              description=field.help_text)

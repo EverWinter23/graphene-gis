@@ -30,6 +30,20 @@ class GISScalar(Scalar):
         return eval(geometry.geojson)
 
 
+class JSONScalar(Scalar):
+    @staticmethod
+    def serialize(value):
+        return value
+
+    @staticmethod
+    def parse_literal(cls, node):
+        return node.value
+
+    @staticmethod
+    def parse_value(cls, node):
+        return node
+
+
 class PointScalar(GISScalar):
     geom_typeid = 0
 
