@@ -11,10 +11,16 @@ dev_requires = [
     "flake8==3.7.8",
 ] + tests_require
 
+with open("README.md", "r") as desc:
+    long_description = desc.read()
+
 setup(
     name="graphene-gis",
-    version="0.0.2",
+    version="0.0.3",
     description="GIS support for graphene-django",
+    long_description_content_type='text/markdown',
+    url="https://github.com/EverWinter23/graphene-gis",
+    long_description=long_description,
     keywords="api graphql graphene geos gis",
     packages=find_packages(exclude=["tests"]),
     author="Rishabh Mehta",
@@ -33,6 +39,12 @@ setup(
         "test": tests_require,
         "dev": dev_requires,
     },
+
+    classifiers=(
+        "Programming Language :: Python :: 3.7",
+        "License :: OSI Approved :: Apache Software License",
+        "Operating System :: OS Independent",
+    ),
 
     include_package_data=True,
     zip_safe=False,
