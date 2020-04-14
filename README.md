@@ -156,8 +156,9 @@ Output without using `json_converter`
 
 Now if you're working with GeoJSON, you're not working with just one vector,
 you're probably working with thousands. Voila `json_converter`!!! Now you can
-plot it directly, if you store it in such a way! I want go into how to structure
-the model.
+plot it directly, if you store it in such a way! I won't go into how to structure
+the model, but this is fairly accurate description of `GeoJSON`, and anyone
+familiar with `django` will be able to reproduce it without issues.
 
 ```json
 {
