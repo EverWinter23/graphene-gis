@@ -5,7 +5,13 @@ from graphene_gis import scalars
 
 def test_should_mutate_gis_scalar_using_parse_literal():
     class PointModelType(graphene.ObjectType):
-        location = graphene.Field(graphene.String, to=scalars.PointScalar())
+        location = graphene.Field(graphene.JSONString, to=scalars.PointScalar())
+
+    class Query(graphene.ObjectType):
+        hello_world = graphene.String()
+
+        def resolve_hello_world(self, info):
+            return "hello, world!"
 
     class CreatePointModelType(graphene.Mutation):
         point = graphene.Field(PointModelType)
@@ -20,7 +26,7 @@ def test_should_mutate_gis_scalar_using_parse_literal():
     class TestMutation(graphene.ObjectType):
         create_point = CreatePointModelType.Field()
 
-    schema = graphene.Schema(mutation=TestMutation)
+    schema = graphene.Schema(query=Query, mutation=TestMutation)
 
     query = """
         mutation {
@@ -34,7 +40,7 @@ def test_should_mutate_gis_scalar_using_parse_literal():
 
     expected = {
         "createPoint": {
-            "point": {"location": "{'type': 'Point', 'coordinates': [3.0, 5.0]}"}
+            "point": {"location": '{"type": "Point", "coordinates": [3.0, 5.0]}'}
         }
     }
 
@@ -53,6 +59,12 @@ def test_should_mutate_json_scalar_using_parse_literal():
     class JSONModelType(graphene.ObjectType):
         props = graphene.Field(graphene.JSONString, to=scalars.JSONScalar())
 
+    class Query(graphene.ObjectType):
+        hello_world = graphene.String()
+
+        def resolve_hello_world(self, info):
+            return "hello, world!"
+
     class JSONMutation(graphene.Mutation):
         json = graphene.Field(JSONModelType)
 
@@ -66,7 +78,7 @@ def test_should_mutate_json_scalar_using_parse_literal():
     class Mutation(graphene.ObjectType):
         create_json = JSONMutation.Field()
 
-    schema = graphene.Schema(mutation=Mutation)
+    schema = graphene.Schema(query=Query, mutation=Mutation)
 
     mutation = """
         mutation JSONMutation{

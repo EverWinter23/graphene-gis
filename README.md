@@ -213,7 +213,7 @@ $ twine upload dist/*
 
 ### UPDATE
 
-Targeting graphene-v3 update by March'22.
+- [x] Targeting graphene-v3 update by March'22 -> [MR](https://github.com/EverWinter23/graphene-gis/pull/16)
 
 ### LICENSE [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
