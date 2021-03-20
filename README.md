@@ -10,6 +10,10 @@
 $ pip install graphene-gis
 ```
 
+Make sure that you have appropriate driver to interact with postgis-- `psycopg2` or
+`psycopg2-binary`. The binary package is a practical choice for development and testing
+but in production it is advised to use the package built from sources. More info [here](https://www.psycopg.org/articles/2018/02/08/psycopg-274-released/).
+
 Add it to your `INSTALLED_APPS` in `settings.py`:
 
 ```python

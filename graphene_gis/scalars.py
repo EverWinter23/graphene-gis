@@ -1,3 +1,4 @@
+import json
 from graphql.language import ast
 from graphene.types import Scalar
 from django.contrib.gis.geos import GEOSGeometry
@@ -13,18 +14,18 @@ class GISScalar(Scalar):
 
     @staticmethod
     def serialize(geometry):
-        return eval(geometry.geojson)
+        return json.loads(geometry.geojson)
 
     @classmethod
     def parse_literal(cls, node):
         assert isinstance(node, ast.StringValue)
         geometry = GEOSGeometry(node.value)
-        return eval(geometry.geojson)
+        return json.loads(geometry.geojson)
 
     @classmethod
     def parse_value(cls, node):
         geometry = GEOSGeometry(node.value)
-        return eval(geometry.geojson)
+        return json.loads(geometry.geojson)
 
 
 class JSONScalar(Scalar):

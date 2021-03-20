@@ -29,7 +29,6 @@ setup(
         "graphene>=2.1,<3",
         "graphene-django>=2.5,<3",
         "graphql-core>=2.1,<3",
-        "psycopg2>=2.8,<3"
     ],
 
     setup_requires=["pytest-runner"],
