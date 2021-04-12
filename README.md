@@ -25,9 +25,15 @@ INSTALLED_APPS = [
 
 ### USAGE
 
+Hi, check this-> [geoql](https://github.com/EverWinter23/geoql) project out,
+it demonstrates usage-- such as querying, mutations using `WKT` and `geojson`.
+I will be adding more stuff soon such as containerization, interactive UI etc,
+and more examples that showcases the library. This project provides an insight
+into real-world usage of the library, do check it out.
+
 This extension can works out of the box with `WKT`, but if you want to use
 `GeoJSON` for input while mutations, install `rest_framework_gis` alongside
-it.
+it-- or check out `geoql` sample project.
 
 #### QUERY
 
