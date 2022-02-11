@@ -211,6 +211,10 @@ $ python setup.py sdist
 $ twine upload dist/*
 ```
 
+### UPDATE
+
+Targeting graphene-v3 update by March'22.
+
 ### LICENSE [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This code falls under the MIT license which permits the reuse of the proprietary software provided that all copies of the licensed software include a copy of the MIT License terms and the copyright notice. Go crazy!

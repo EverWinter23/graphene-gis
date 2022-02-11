@@ -24,7 +24,7 @@ class GISScalar(Scalar):
 
     @classmethod
     def parse_value(cls, node):
-        geometry = GEOSGeometry(node.value)
+        geometry = GEOSGeometry(node)
         return json.loads(geometry.geojson)
 
 
