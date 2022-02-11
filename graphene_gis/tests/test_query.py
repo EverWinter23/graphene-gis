@@ -76,14 +76,14 @@ def test_should_convert_json_to_dict():
 
 """
 NOTE: Refer https://github.com/EverWinter23/graphene-gis/issues/9
-Some evasive issue. I wouldn't reccomend using the following for
+Some evasive issue. I wouldn't recommend using the following for
 implementing mutations, because it involves some unecessary steps.
 
 The converter will convert the WKT geometry to geojson, which you'll
 have to convert back to WKT using GEOSGeometry to initialize the object.
 
-It's way simple rather use the graphene.String for the input argument for 
-WKT inputs. This is demonstarted in the next test case.
+It's way more simpler to use the graphene.String as the input argument for 
+WKT inputs. This is demonstrated in the next test case.
 """
 def test_scalar_query_variables():
     class Query(graphene.ObjectType):

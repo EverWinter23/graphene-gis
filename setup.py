@@ -16,7 +16,7 @@ with open("README.md", "r") as desc:
 
 setup(
     name="graphene-gis",
-    version="0.0.6",
+    version="0.0.7",
     description="GIS support for graphene-django",
     long_description_content_type='text/markdown',
     url="https://github.com/EverWinter23/graphene-gis",
