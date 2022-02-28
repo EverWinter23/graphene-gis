@@ -16,7 +16,7 @@ with open("README.md", "r") as desc:
 
 setup(
     name="graphene-gis",
-    version="0.0.7",
+    version="0.0.8b",
     description="GIS support for graphene-django",
     long_description_content_type='text/markdown',
     url="https://github.com/EverWinter23/graphene-gis",
@@ -26,9 +26,9 @@ setup(
     author="Rishabh Mehta",
     author_email="eternal.blizzard23@gmail.com",
     install_requires=[
-        "graphene>=2.1,<3",
-        "graphene-django>=2.5,<3",
-        "graphql-core>=2.1,<3",
+        "graphene>=3.0.0,<4",
+        "graphene-django>=3.0.0b7,<4",
+        "graphql-core>=3.1.2,<4",
     ],
 
     setup_requires=["pytest-runner"],
