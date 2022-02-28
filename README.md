@@ -214,6 +214,9 @@ $ twine upload dist/*
 ### UPDATE
 
 - [x] Targeting graphene-v3 update by March'22 -> [MR](https://github.com/EverWinter23/graphene-gis/pull/16)
+- Install the pre-release using:
+
+  `pip install graphene-gis==0.0.8b0`
 
 ### LICENSE [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
