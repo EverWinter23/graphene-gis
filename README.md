@@ -1,6 +1,6 @@
 ### graphene-gis
 
-[![CircleCI](https://circleci.com/gh/EverWinter23/graphene-gis.svg?style=shield)](https://circleci.com/gh/EverWinter23/graphene-gis)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/EverWinter23/graphene-gis/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/EverWinter23/graphene-gis/tree/master)
 
 ### INSTALLATION
 
@@ -215,6 +215,7 @@ $ twine upload dist/*
 
 - [x] Targeting graphene-v3 update by March'22 -> [MR](https://github.com/EverWinter23/graphene-gis/pull/16)
 - Install the pre-release using:
+- [ ] Django 4.2 LTS support by May'23
 
   `pip install graphene-gis==0.0.8b0`
 
