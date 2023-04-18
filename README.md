@@ -4,7 +4,7 @@
 
 ### INSTALLATION
 
-`django==2.2` is supported. Install the `graphene-gis` with pip:
+Django support depends on `graphene-django`. Install the `graphene-gis` with pip:
 
 ```bash
 $ pip install graphene-gis
