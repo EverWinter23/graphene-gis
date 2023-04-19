@@ -1,6 +1,7 @@
 ### graphene-gis
 
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/EverWinter23/graphene-gis/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/EverWinter23/graphene-gis/tree/master)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/EverWinter23/graphene-gis/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/EverWinter23/graphene-gis/tree/master)
+![Monthly Downloads](https://img.shields.io/pypi/dm/graphene-gis.svg)
 
 ### INSTALLATION
 
